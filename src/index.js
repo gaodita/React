@@ -3,9 +3,12 @@ import ReactDOM  from 'react-dom'//把创建好的主键和虚拟DOM放到页面
 
 //导入组件
 import Hello from './components/Hello.jsx'
-import   './components/BaseUseClass.js'
+// import   './components/BaseUseClass.js'
+// import './components/Human'
+import Movie from './components/ClassComponet'
+// import CmItem from './components/CmItem'
 
-
+//使用return的时候 需要同时连接<div> 如果没有需要 加上 ()形式返回数据
 
 //1、这两个导入时候，接收的接收成员名称 必须这么写
 //
@@ -67,11 +70,11 @@ import   './components/BaseUseClass.js'
 // 参数3：
 // 参数n：
 
-const dog ={
-    name:"大黄",
-    age:"3",
-    gender:"雄性"
-}
+// const dog ={
+//     name:"大黄",
+//     age:"3",
+//     gender:"雄性"
+// }
 
 
 
@@ -80,6 +83,6 @@ const dog ={
 ReactDOM.render(<div>
     Hello World!!!
     <br/>
-    <Hello {...dog}></Hello>
-
+    {/*<Hello {...dog}></Hello>*/}
+    <Movie></Movie>
 </div>,document.getElementById("app"));
