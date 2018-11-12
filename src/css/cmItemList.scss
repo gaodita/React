@@ -1,0 +1,12 @@
+:local(.title){
+    text-align: center;
+    color: red;
+}
+/*Css模块化 类选择器和id选着器生效*/
+/*注意；被:global() 包裹起来的类型 不会被模块化*/
+
+:global(.test){
+
+    font-style: italic;
+
+}

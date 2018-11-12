@@ -81,8 +81,7 @@ import Movie from './components/ClassComponet'
 
 // {/*<Hello name={dog.name} age={dog.age} gender={dog.gender}></Hello>*/}
 ReactDOM.render(<div>
-    Hello World!!!
-    <br/>
+
     {/*<Hello {...dog}></Hello>*/}
     <Movie></Movie>
 </div>,document.getElementById("app"));

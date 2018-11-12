@@ -29,7 +29,15 @@ module.exports ={
                 use:{ loader:'babel-loader'
                 },
                 exclude:/node_modules/
-            }
+            },{
+            test:/\.css$/,
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
+
+            },{test:/\.(ttf|woff|woff2|eot|svg)$/,use:'url-loader'//打包处理字体文件Loader 加载其他组件
+            },{test:/\.scss$/,use:['style-loader','css-loader?modules&localIdentName=[path][name]-[local]-[hash:6]','sass-loader']},
         ]
     },
     resolve: {//英文含义 决定

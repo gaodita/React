@@ -9,6 +9,16 @@ import CmItem from './CmItem'
 //7、组件中的 props和state/date的区别
 //8、props中的数据都是外界传递过来的state/data中的数据，都是私有数据通过Ajax传递过来的
 
+import cssobj from '@/css/cmItemList.scss'
+console.log(cssobj)
+//如果在引用某个包的时候，这个包被安装到了 node_module 目录中 可以省略 node_module 这层目录 自接以包名引入样式
+import  'bootstrap/dist/css/bootstrap.css'
+
+//自己规定 第三方的样式表 都是以.css结尾
+//        自己定义的样式表，都是以.scss或者.less结尾 这样我们就不对普通的css文件进行模块化处理
+//
+
+
 export default class Movie extends  Component{
 
     constructor(){
@@ -30,8 +40,12 @@ export default class Movie extends  Component{
 
     render(){
 
-        return <div>这是评论列表组件
-        <br/>
+        return <div>
+            <h1 className={[cssobj.title,'test'].join(' ')}>这是评论列表组件</h1>
+            <button className='btn btn-primary'>按钮</button>
+            <div className="panel panel-primary"></div>
+            {/*<button className={[bootcss.btn,bootcss['btn-primary']].join(' ')}>按钮</button>*/}
+            <br/>
             {this.state.ComponentList.map(item =><CmItem {...item} key={item.id}></CmItem>)
                 }
         </div>
